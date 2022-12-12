@@ -7,6 +7,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AddSecurityGuardComponent } from './add-security-guard/add-security-guard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const myroute:Routes=[
   {
@@ -14,7 +15,7 @@ const myroute:Routes=[
     component:AdminLoginComponent
   },
   {
-    path:"addsecurity",
+    path:"security",
     component:AddSecurityGuardComponent
   }
 ]
@@ -22,7 +23,8 @@ const myroute:Routes=[
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AddSecurityGuardComponent
+    AddSecurityGuardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

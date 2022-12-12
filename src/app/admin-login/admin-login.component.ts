@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AdminLoginComponent {
 username=""
 password=""
-
+constructor(private route:Router){}
 readValue=()=>{
   let data:any={
     "username":this.username,"password":this.password
@@ -16,7 +17,7 @@ readValue=()=>{
   console.log(data)
 
   if (this.username=="admin"&&this.password=="1234") {
-    alert("successfull")
+   this.route.navigate(['/security'])
     
   } else {
     alert("failed")
